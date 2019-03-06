@@ -12,10 +12,10 @@ var mysql = require('mysql');
 // });
 
 var con = mysql.createConnection({
-    host: "us-cdbr-iron-east-03.cleardb.net",
-    user: "baa55d5411431a",
-    password: "334879d1",
-    database: "heroku_45cb0bfd3d23de1"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
   });
 
 con.connect(function(err) {
