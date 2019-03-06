@@ -4,12 +4,19 @@ var fs = require("fs");
 
 var mysql = require('mysql');
 
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "password",
+//   database: "recipedb"
+// });
+
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "recipedb"
-});
+    host: "us-cdbr-iron-east-03.cleardb.net",
+    user: "baa55d5411431a",
+    password: "334879d1",
+    database: "heroku_45cb0bfd3d23de1"
+  });
 
 con.connect(function(err) {
   if (err) throw err;
