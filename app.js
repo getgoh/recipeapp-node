@@ -54,7 +54,7 @@ app.get('/recipe/:id', function(req, res){
         queryStr = "select * from tbl_recipe where id=?";
         con.query(queryStr, [req.params.id], function(err, rows){
             if (err) throw err;
-            res.send(JSON.stringify(rows[0]));
+            res.send(JSON.stringify(rows[0], null, 4));
         });
     }
 });
@@ -66,7 +66,7 @@ app.get('/recipe', function(req, res){
         queryStr = "select * from tbl_recipe";
         con.query(queryStr, function(err, rows){
             if (err) throw err;
-            res.send(JSON.stringify(rows));
+            res.send(JSON.stringify(rows, null, 4));
         });
     }
 });
