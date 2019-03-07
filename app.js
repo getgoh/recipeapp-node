@@ -43,6 +43,10 @@ function handleDisconnect() {
   handleDisconnect();
 
 
+app.get('/hilove', function(req, res){
+  res.send('Hi love');
+});
+
 // get recipe by id
 app.get('/recipe/:id', function(req, res){
     if (con)
