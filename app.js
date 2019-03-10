@@ -83,8 +83,8 @@ app.get('/recipe', function(req, res){
     if (con)
     {
         queryStr = "SELECT r.id, r.name, r.description, r.preptime, r.cookingtime, d.id as dir_id, d.recipe_id, d.directions \
-                    FROM recipedb.tbl_recipe r \
-                    inner join recipedb.tbl_directions d \
+                    FROM tbl_recipe r \
+                    inner join tbl_directions d \
                     on r.id = d.recipe_id;";
         con.query(queryStr, function(err, rows){
 
