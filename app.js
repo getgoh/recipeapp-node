@@ -9,19 +9,19 @@ var mysql = require('mysql');
 // });
 
 
-  // var db_config = {
-  //   host: process.env.DB_HOST,
-  //   user: process.env.DB_USER,
-  //   password: process.env.DB_PASS,
-  //   database: process.env.DB_NAME
-  // };
-
   var db_config = {
-    host: "localhost",
-    user: "root",
-    password: "password",
-    database: "recipedb"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
   };
+
+  // var db_config = {
+  //   host: "localhost",
+  //   user: "root",
+  //   password: "password",
+  //   database: "recipedb"
+  // };
 
 function handleDisconnect() {
     con = mysql.createConnection(db_config); // Recreate the connection, since
